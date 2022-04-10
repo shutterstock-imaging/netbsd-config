@@ -9,7 +9,7 @@ snapdist 4
 bind-key 4-return	"xterm"
 bind-key 4-b		"firefox"
 
-bind-key 4-d	"dmenu"
+bind-key 4-d	"dmenu_run -b -f  -nb '#050605' -nf '#FA6808' -sb '#DA621A' -sf '#e0e0df' -fn 'terminus:bold:pixelsize=12'"
 
 ##group
 
