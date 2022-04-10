@@ -1,0 +1,2 @@
+# netbsd-config
+netbsd crap 
