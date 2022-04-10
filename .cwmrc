@@ -1,0 +1,65 @@
+## settings
+borderwidth 2
+snapdist 10
+gap 5 5 5 5 
+sticky yes
+snapdist 4
+
+## exec
+bind-key 4-return	"xterm"
+bind-key 4-b		"firefox"
+
+bind-key 4-d	"dmenu"
+
+##group
+
+bind-key 4-1 	group-only-1
+bind-key 4-2	group-only-2
+bind-key 4-3	group-only-3
+bind-key 4-4	group-only-4
+bind-key 4S-1	window-movetogroup-1
+bind-key 4S-2	window-movetogroup-2
+bind-key 4S-3   window-movetogroup-3
+bind-key 4S-4	window-movetogroup-4
+
+##key bind
+
+bind-key M-Tab	window-cycle
+bind-key 4-Tab	group-cycle
+
+bind-key 4-f	window-maximize
+bind-key 4-space	window-fullscreen
+bind-key 4-o	window-snap-left
+bind-key 4-p	window-snap-right
+bind-key 4S-q	window-close
+
+bind-key 4S-b 	window-vmaximize 
+bind-key 4S-r 	restart
+bind-key 4S-e	 quit
+
+## resize
+
+bind-key 4S-h 	window-resize-left
+bind-key 4S-j 	window-resize-down
+bind-key 4S-k	window-resize-up
+bind-key 4S-l	window-resize-right
+bind-key 4-h	window-move-left-big
+bind-key 4-j	window-move-down-big
+bind-key 4-k	window-move-up-big
+bind-key 4-l 	window-move-right-big	
+
+##  mouse binds
+unbind-mouse all 
+
+bind-mouse 4-1 window-move
+bind-mouse 4-2 window-lower
+
+## color
+
+color menufg	"#777777"
+color menubg	"#000000"
+color font	"#777777"
+color selfont	"#000000"
+
+color activeborder	"#F26711"
+color inactiveborder	"#777777"

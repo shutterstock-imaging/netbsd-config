@@ -1,0 +1,76 @@
+(*) applies to .Xresources palette
+ 
+! mksh prompt (*)
+PS1=$'\E[35;7m$(logname) \E[0m\E[37;42m$(hostname -s)\E[0m \E[4;39m$PWD \E$[0m $
+ 
+! .Xresources palette
+ 
+*foreground:  #e0e0df
+*background:  #050605
+*borderColor: #050605
+*color0: #050605
+*color1:  #A65324
+*color2:  #DA621A
+*color3:  #FA6808
+*color4:  #95837F
+*color5:  #A1A1A0
+*color6:  #C4BBB5
+*color7:  #e0e0df
+*color8:  #9c9c9c
+*color9:  #A65324
+*color10:  #DA621A
+*color11:  #FA6808
+*color12:  #95837F
+*color13:  #A1A1A0
+*color14:  #C4BBB5
+*color15:  #e0e0df
+ 
+
+! xterm
+ 
+XTerm*foreground:  #777777
+XTerm*background:  #000000
+XTerm*color0: #050605
+XTerm*color1:  #A65324
+XTerm*color2:  #DA621A
+XTerm*color3:  #FA6808
+XTerm*color4:  #95837F
+XTerm*color5:  #A1A1A0
+XTerm*color6:  #C4BBB5
+XTerm*color7:  #e0e0df
+XTerm*color8:  #9c9c9c
+XTerm*color9:  #A65324
+XTerm*color10:  #DA621A
+XTerm*color11:  #FA6808
+XTerm*color12:  #95837F
+XTerm*color13:  #A1A1A0
+XTerm*color14:  #C4BBB5
+XTerm*color15:  #e0e0df
+ 
+! tmux
+! tmux colors (*)
+set -g default-terminal "screen-256color-bce-s"
+set-option -ga terminal-overrides ",screen-256color-bce-s:Tc"
+set-option -g pane-border-fg colour235
+set-option -g pane-active-border-fg colour240
+set -g pane-active-border-bg colour236
+set -g pane-active-border-fg yellow
+set -g message-bg yellow
+set -g message-command-fg brightblack
+set -g message-command-bg black
+set -g message-attr bold
+set -g message-fg colour232
+set -g message-bg colour166
+set-option -g status-bg colour235
+set-option -g status-fg yellow
+set-option -g status-attr dim
+set-window-option -g window-status-fg colour247
+set-window-option -g window-status-bg colour236
+set-window-option -g window-status-attr dim
+set-window-option -g window-status-current-fg brightred
+set-window-option -g window-status-current-bg colour236
+set-window-option -g window-status-current-attr bright
+setw -g window-status-bell-attr bold
+setw -g window-status-bell-fg colour255
+setw -g window-status-bell-bg colour1
+set -g status-right "#[fg=yellow]ram_load:#[fg=white]#(cat /proc/meminfo | awk 'FNR== 2 {print $3/$2 *100}' | cut -c 1-4)  #[fg=yellow]cpu_temp:#[fg=white]#(envstat | grep cpu0 | awk '{print $3}' | cut -c 2-4 )°C  #[fg=yellow]used_root /:#[fg=white]#(df -k | egrep 'root|/$' | awk '{print$5}') #[fg=yellow]uptime:#[fg=white]#(uptime | awk \"{print \\$3}\"|sed \"s/,//\")'  #[fg=yellow]batt:#[fg=white]#(envstat -d acpibat0 | awk 'FNR==7 {print $6}' |cut -c 2-4)% "
